@@ -9,13 +9,28 @@ void main() {
               style: TextStyle(fontSize: 35),
             ),
           ),
-          body: Align(
-              alignment: Alignment(0, 0),
-              child: Text(
-                'Снова привет',
-                style: TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red),
-              )))));
+          body: Stack(
+            alignment: Alignment.center,
+            children: [
+              Image(
+                image: AssetImage('assets/images/ima.jpg'),
+                width: 400,
+                height: 400,
+              ),
+              Icon(
+                Icons.dangerous,
+                color: Colors.blue,
+                size: 150,
+              ),
+              Positioned(
+                  top: 250,
+                  child: Text(
+                    "Пока",
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontFamily: 'Roboto',
+                        color: Colors.white),
+                  )),
+            ],
+          ))));
 }
